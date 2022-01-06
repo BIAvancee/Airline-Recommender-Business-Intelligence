@@ -39,7 +39,7 @@ function Star( props ){
     constructor( props ) {
       super( props );
       this.state = {
-        stars: Array(5).fill(-1),
+        stars: Array(3).fill(-1),
       //  rated: props.rated
       };
     }
@@ -111,8 +111,7 @@ function Star( props ){
               {this.renderStar(1)}
               {this.renderStar(2)}
               {this.renderStar(3)}
-              {this.renderStar(4)}
-              {this.renderStar(5)}
+           
             </div>
           
             {this.handleRating( this.props.rated )}

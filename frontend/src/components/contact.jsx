@@ -1,23 +1,37 @@
 import React,{useState}  from 'react';
 import { RatingWidget } from './ratingStars';
 import {useFormik} from "formik";
+import { recommendation } from '../services/services';
+import swal from 'sweetalert';
 
 function Contact(props) {
   const [rated, setRated] = useState(0);
 
+  const recomm=()=>{
+    swal("Good job!", "You have successfully rated this airline!", "success");
+  }
   const initialValues = {
     name: "",
     airline: "",
-    message: "",
+    reted:""
   }
   function onSubmit(values) {
       const registered = {
         name: values.name,
         airline: values.airline,
-        message: values.message,
+        rated: rated
       };
       console.log(registered);
       console.log("sfhs", rated);
+      recommendation(registered)
+      .then((response) => {
+             
+        console.log(response);
+       
+     })
+     .catch((error) => {
+         console.log(error);
+     });
       
   }
   const formik = useFormik({ initialValues, onSubmit });
@@ -36,7 +50,9 @@ function Contact(props) {
             <div className="col-lg-12">
               <form name="sentMessage" id="contactForm" noValidate onSubmit={formik.handleSubmit}>
                 <div className="row">
-                  <div className="col-md-6">
+                <div className="col-md-2">
+</div>
+                  <div className="col-md-8">
                     <div className="form-group">
                       <input type="text" className="form-control" name="name" placeholder="Your Name *"
                       value={formik.values.name}
@@ -55,19 +71,11 @@ function Contact(props) {
                       <RatingWidget rated={rated} setRated={setRated}/>
                     </div>
                   </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <textarea className="form-control" name="message" placeholder="Your Message *"
-                      value={formik.values.message}
-                      onChange={formik.handleChange}
-                      id="message" required data-validation-required-message="Please enter a message." defaultValue={""} />
-                      <p className="help-block text-danger" />
-                    </div>
-                  </div>
+                 
                   <div className="clearfix" />
                   <div className="col-lg-12 text-center">
                     <div id="success" />
-                    <button type="submit" className="btn btn-xl">Submit</button>
+                    <button type="submit" className="btn btn-xl" onClick={()=>{recomm()}}>Submit</button>
                   </div>
                 </div>
               </form>

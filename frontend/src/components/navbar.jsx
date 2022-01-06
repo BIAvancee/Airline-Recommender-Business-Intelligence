@@ -12,7 +12,7 @@ function Navbar(props) {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand page-scroll" href="#page-top">Best Airline Recommander</a>
+            <a className="navbar-brand page-scroll" href="#page-top"><b>Best Airline Recommander</b></a>
           </div>
           {/* Collect the nav links, forms, and other content for toggling */}
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

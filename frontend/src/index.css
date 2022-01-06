@@ -691,6 +691,11 @@ section#contact .form-group textarea.form-control {
 }
 #butt{
   height: 50px;
+  
+  width:100px; 
+  position:relative;
+  top:50%; 
+  left:10%;
 }
 section#contact .form-control:focus {
   border-color: #1ee2e7;
@@ -953,4 +958,7 @@ Rating Star Widget Style
   /* Full height */
   height: 100%;
 
+}
+#name{
+  padding: 25px;
 }
