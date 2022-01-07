@@ -40,14 +40,14 @@ On both /backend and /frontend
 ```
 ## Preview
 
-**Full Screen Application**
+***Full Screen Application***
 ![1](https://github.com/Fatma3011/Airline-Recommender-Business-Intelligence/blob/master/fullScreen.png)
 
-**Recommendation Screen**
+***Recommendation Screen***
 ![1](https://github.com/Fatma3011/Airline-Recommender-Business-Intelligence/blob/master/recommend.png)
 
-**Rate Screen**
+***Rate Screen***
 ![1](https://github.com/Fatma3011/Airline-Recommender-Business-Intelligence/blob/master/rate.png)
 
-**Rate Alert**
+***Rate Alert***
 ![1](https://github.com/Fatma3011/Airline-Recommender-Business-Intelligence/blob/master/alert.png)
