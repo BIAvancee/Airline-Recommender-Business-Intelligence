@@ -56,7 +56,7 @@ On both /backend and /frontend
 ***Rate Screen***
 
 
-![1](https://github.com/Fatma3011/Airline-Recommender-Business-Intelligence/blob/master/rate.png = 250x)
+![1](https://github.com/Fatma3011/Airline-Recommender-Business-Intelligence/blob/master/rate.png)
 
 
 ***Rate Alert***
